@@ -207,6 +207,10 @@ app.post(
   }
 );
 
+app.get('/get-users', (req, res) => {
+  return res.send(userTable);
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
   console.log(`users that are logged in: ${userTable.map((user) => user.id)}`);
